@@ -10,6 +10,11 @@ public class MainPage extends BasePage{
     @FindBy(linkText = "Giyim & aksesuar")
     public WebElement giyimAksesuarButton;
 
+    @FindBy(xpath = "//button[normalize-space(text())='Kabul Et']")
+    public WebElement cookiesAcceptButton;
+
+
+
     public void getLink(String link){
         Driver.getDriver().findElement(By.partialLinkText(link)).click();
 

@@ -2,6 +2,7 @@ package com.patricium.step_definitions;
 
 import com.github.javafaker.Faker;
 import com.patricium.pages.*;
+import com.patricium.utilities.BrowserUtils;
 import com.patricium.utilities.Driver;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
@@ -23,6 +24,8 @@ public class FirstTask {
     @Given("user already on mainpage")
     public void userAlreadyOnMainpage() {
         Driver.getDriver().get("https://www.a101.com.tr/");
+        BrowserUtils.waitForClickAbility(mainPage.cookiesAcceptButton,10);
+        mainPage.cookiesAcceptButton.click();
     }
 
     @When("user  hover over Giyim-Aksesuar")
