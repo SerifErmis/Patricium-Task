@@ -35,12 +35,12 @@ public class FirstTask {
     }
 
     @And("user clicks Dizaltı Çorap under Kadın İç Giyim")
-    public void userClicksDizaltıÇorapUnderKadınİçGiyim() {
+    public void userClicksDizaltiCorapUnderKadinİcGiyim() {
         mainPage.getLink("Dizaltı");
     }
 
     @And("user select first product on Dizaltı Çorap")
-    public void userSelectFirstProductOnDizaltıÇorap() {
+    public void userSelectFirstProductOnDizaltiCorap() {
         BrowserUtils.waitFor(2);
         mainPage.getLink("Siyah");
     }
@@ -56,7 +56,7 @@ public class FirstTask {
     }
 
     @And("user clicks Sepeti Görüntüle button")
-    public void userClicksSepetiGörüntüleButton() {
+    public void userClicksSepetiGoruntuleButton() {
        mainPage.getLink("Sepeti Görüntüle");
     }
 
@@ -106,7 +106,7 @@ public class FirstTask {
     }
 
     @And("user clicks Garanti Pay ile Öde button")
-    public void userClicksGarantiPayIleÖdeButton() {
+    public void userClicksGarantiPayIleOdeButton() {
         basketPage.approveCheckbox.click();
     }
 
