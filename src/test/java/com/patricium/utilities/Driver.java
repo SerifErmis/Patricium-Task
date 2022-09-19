@@ -3,12 +3,15 @@ package com.patricium.utilities;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
 
 import java.net.MalformedURLException;
 import java.net.URL;
+import java.util.HashMap;
+import java.util.Map;
 import java.util.concurrent.TimeUnit;
 
 public class Driver {
@@ -47,6 +50,23 @@ public class Driver {
                         e.printStackTrace();
                     }
                     break;
+                case "sauceLabs":
+                     try {
+                        ChromeOptions browserOptions = new ChromeOptions();
+                        browserOptions.setCapability("platformName", "Windows 10");
+                        browserOptions.setCapability("browserVersion", "latest");
+                        Map<String, Object> sauceOptions = new HashMap<>();
+                        sauceOptions.put("build", "<your build id>");
+                        sauceOptions.put("name", "<your test name>");
+                        browserOptions.setCapability("sauce:options", sauceOptions);
+
+                        URL url = new URL("https://oauth-berivanserif-71950:3dd7016d-3c98-47a9-a501-3b191dc241b2@ondemand.eu-central-1.saucelabs.com:443/wd/hub");
+                        RemoteWebDriver driver = new RemoteWebDriver(url, browserOptions);
+                    } catch (MalformedURLException e) {
+                        e.printStackTrace();
+                    }
+                    break;
+
 
 
             }

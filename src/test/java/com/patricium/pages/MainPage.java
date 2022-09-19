@@ -7,7 +7,7 @@ import org.openqa.selenium.support.FindBy;
 
 public class MainPage extends BasePage{
 
-    @FindBy(linkText = "Giyim & aksesuar")
+    @FindBy(xpath = "//a[normalize-space(text())='Giyim & aksesuar']")
     public WebElement giyimAksesuarButton;
 
     @FindBy(xpath = "//button[normalize-space(text())='Kabul Et']")

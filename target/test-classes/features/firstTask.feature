@@ -1,4 +1,3 @@
-@wip
 Feature:Patricium Task
 
   - Giyim--> Aksesuar--> Kadın İç Giyim-->Dizaltı Çorap bölümüne girilir.
@@ -13,7 +12,7 @@ Feature:Patricium Task
 
   Background:
     Given user already on mainpage
-
+ @wip
   Scenario:
     When user  hover over Giyim-Aksesuar
     And user clicks Dizaltı Çorap under Kadın İç Giyim

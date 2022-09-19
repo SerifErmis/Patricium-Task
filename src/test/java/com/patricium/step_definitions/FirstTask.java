@@ -41,6 +41,7 @@ public class FirstTask {
 
     @And("user select first product on Dizaltı Çorap")
     public void userSelectFirstProductOnDizaltıÇorap() {
+        BrowserUtils.waitFor(2);
         mainPage.getLink("Siyah");
     }
 
@@ -84,9 +85,9 @@ public class FirstTask {
         addressPage.titleInput.sendKeys("Ev"+Keys.TAB+faker.name().firstName()+Keys.TAB+
                 faker.name().lastName()+Keys.TAB+faker.phoneNumber().cellPhone());
         Select dropCity = new Select(addressPage.cityInput);
-        dropCity.selectByIndex(4);
+        dropCity.selectByIndex(3);
         Select dropTown = new Select(addressPage.townInput);
-        dropTown.selectByIndex(8);
+        dropTown.selectByIndex(7);
         Select dropDistrict = new Select(addressPage.districtInput);
         dropDistrict.selectByIndex(3);
         addressPage.lineTextInput.sendKeys(faker.address().fullAddress()+Keys.TAB+faker.number().numberBetween(10000,99999));
@@ -94,9 +95,9 @@ public class FirstTask {
 
     }
 
-    @And("user select MNG shipment company")
-    public void userSelectMNGShipmentCompany() {
-        basketPage.MNGButton.click();
+    @And("user select any shipment company")
+    public void userSelectAnyShipmentCompany() {
+        basketPage.shipmentCompanyButton.click();
     }
 
     @And("user select Garanti Pay payment type")

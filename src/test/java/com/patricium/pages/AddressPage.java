@@ -16,7 +16,7 @@ public class AddressPage extends BasePage{
     @FindBy(name = "township")
     public WebElement townInput;
 
-    @FindBy(name = "district")
+    @FindBy(css = "select.js-district")
     public WebElement districtInput;
 
     @FindBy(name = "line")

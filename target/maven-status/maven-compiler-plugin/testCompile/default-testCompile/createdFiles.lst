@@ -1,0 +1,12 @@
+com\patricium\pages\BasketPage.class
+com\patricium\step_definitions\FirstTask.class
+com\patricium\pages\ProductPage.class
+com\patricium\pages\AddressPage.class
+com\patricium\runners\CukesRunner.class
+com\patricium\utilities\ConfigurationReader.class
+com\patricium\step_definitions\Hooks.class
+com\patricium\pages\BasePage.class
+com\patricium\utilities\Driver.class
+com\patricium\runners\FailedTestsRunner.class
+com\patricium\utilities\BrowserUtils.class
+com\patricium\pages\MainPage.class

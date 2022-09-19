@@ -17,8 +17,8 @@ public class BasketPage extends BasePage{
 
     //Yeni adres oluştur
 
-    @FindBy(xpath ="//*[normalize-space(text())='MNG Kargo']")
-    public WebElement MNGButton;
+    @FindBy(css = "label.js-checkout-cargo-item")
+    public WebElement shipmentCompanyButton;
 
     @FindBy(xpath ="//*[normalize-space(text())='Kaydet ve Devam Et']")
     public WebElement saveAndContinueButton;
