@@ -17,13 +17,13 @@ public class BasketPage extends BasePage{
 
     //Yeni adres oluştur
 
-    @FindBy(css = "label.js-checkout-cargo-item")
+    @FindBy(xpath = "//*[@class='js-checkout-cargo-item']//input[@type='radio']")
     public WebElement shipmentCompanyButton;
 
     @FindBy(xpath ="//*[normalize-space(text())='Kaydet ve Devam Et']")
     public WebElement saveAndContinueButton;
 
-    @FindBy(xpath ="//*[normalize-space(text())='Garanti Pay']")
+    @FindBy(xpath ="(//*[@data-type='gpay'])[1]")
     public WebElement garantiPayButton;
 
     @FindBy(xpath ="(//label[@class='checkout__contract']//input[@type='checkbox'])[1]")

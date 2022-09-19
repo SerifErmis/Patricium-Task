@@ -93,22 +93,24 @@ public class FirstTask {
         dropDistrict.selectByIndex(3);
         addressPage.lineTextInput.sendKeys(faker.address().fullAddress()+Keys.TAB+faker.number().numberBetween(10000,99999));
         addressPage.saveButton.click();
+        BrowserUtils.waitForClickAbility(basketPage.saveAndContinueButton,10);
+        basketPage.saveAndContinueButton.click();
 
     }
 
-    @And("user select any shipment company")
-    public void userSelectAnyShipmentCompany() {
-        basketPage.shipmentCompanyButton.click();
-    }
+
 
     @And("user select Garanti Pay payment type")
     public void userSelectGarantiPayPaymentType() {
+        BrowserUtils.waitForClickAbility(basketPage.garantiPayButton,10);
         basketPage.garantiPayButton.click();
     }
 
     @And("user clicks Garanti Pay ile Öde button")
     public void userClicksGarantiPayIleOdeButton() {
         basketPage.approveCheckbox.click();
+        mainPage.getLink("Garanti Pay ile Öde");
+        BrowserUtils.waitFor(2);
     }
 
     @Then("user should be on Garanti payment page")

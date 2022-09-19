@@ -14,7 +14,7 @@ Feature:Patricium Task
   Background:
     Given user already on mainpage
   @wip
-  Scenario:
+  Scenario:First Task
     When user  hover over Giyim-Aksesuar
     And user clicks Dizaltı Çorap under Kadın İç Giyim
     And user select first product on Dizaltı Çorap
@@ -26,7 +26,6 @@ Feature:Patricium Task
     And user enter e-mail address
     And user clicks Yeni adres oluştur link
     And user enter valid address information
-    And user select any shipment company
     And user select Garanti Pay payment type
     And user clicks Garanti Pay ile Öde button
     Then user should be on Garanti payment page
