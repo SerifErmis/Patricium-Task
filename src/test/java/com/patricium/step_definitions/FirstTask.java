@@ -23,7 +23,7 @@ public class FirstTask {
 
     @Given("user already on mainpage")
     public void userAlreadyOnMainpage() {
-        Driver.getDriver().get("https://www.a101.com.tr/");
+        Driver.getDriver().get("https://www.a101.com.tr");
         BrowserUtils.waitForClickAbility(mainPage.cookiesAcceptButton,10);
         mainPage.cookiesAcceptButton.click();
     }
@@ -88,6 +88,7 @@ public class FirstTask {
         dropCity.selectByIndex(3);
         Select dropTown = new Select(addressPage.townInput);
         dropTown.selectByIndex(7);
+        BrowserUtils.waitFor(2);
         Select dropDistrict = new Select(addressPage.districtInput);
         dropDistrict.selectByIndex(3);
         addressPage.lineTextInput.sendKeys(faker.address().fullAddress()+Keys.TAB+faker.number().numberBetween(10000,99999));
