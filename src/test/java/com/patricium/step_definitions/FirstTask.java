@@ -35,7 +35,7 @@ public class FirstTask {
     }
 
     @And("user clicks Dizaltı Çorap under Kadın İç Giyim")
-    public void userClicksDizaltiCorapUnderKadinİcGiyim() {
+    public void userClicksDizaltiCorapUnderKadinIcGiyim() {
         mainPage.getLink("Dizaltı");
     }
 
@@ -66,7 +66,7 @@ public class FirstTask {
     }
 
     @And("user clicks Üye olmadan devam et button")
-    public void userClicksÜyeOlmadanDevamEtButton() {
+    public void userClicksUyeOlmadanDevamEtButton() {
         mainPage.getLink("ÜYE OLMADAN DEVAM ET");
     }
 
@@ -76,7 +76,7 @@ public class FirstTask {
             }
 
     @And("user clicks Yeni adres oluştur link")
-    public void userClicksYeniAdresOluşturLink() {
+    public void userClicksYeniAdresOlusturLink() {
         mainPage.getLink("Yeni adres oluştur");
     }
 
